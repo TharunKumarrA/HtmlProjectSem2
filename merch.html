@@ -50,12 +50,12 @@
           </div>
 
           <div class="quantity">
-            <button id="decrease">-</button>
-            <input type="number" id="count" value="0">
-            <button id="increase">+</button>
+            <button id="decrease1">-</button>
+            <input type="number" id="count1" value="0">
+            <button id="increase1">+</button>
           </div>
 
-          <button id="cart">Add to cart</button>
+          <button id="cart" onclick="addToCart(1)">Add to cart</button>
         </div>
       </div>
 
@@ -80,12 +80,12 @@
             <p>18" X 24"</p>
           </div>
           <div class="quantity">
-            <button id="decrease">-</button>
-            <input type="number" id="count" value="0">
-            <button id="increase">+</button>
+            <button id="decrease2">-</button>
+            <input type="number" id="count2" value="0">
+            <button id="increase2">+</button>
           </div>
 
-          <button id="cart">Add to cart</button>
+          <button id="cart" onclick="addToCart(2)">Add to cart</button>
         </div>
       </div>
 
@@ -107,12 +107,12 @@
           </div>
 
           <div class="quantity" style="margin-top: 20px;">
-            <button id="decrease">-</button>
-            <input type="number" id="count" value="0">
-            <button id="increase">+</button>
+            <button id="decrease3">-</button>
+            <input type="number" id="count3" value="0">
+            <button id="increase3">+</button>
           </div>
 
-          <button id="cart" style="margin-top: 65px;">Add to cart</button>
+          <button id="cart" style="margin-top: 65px;" onclick="addToCart(3)">Add to cart</button>
         </div>
       </div>
 
@@ -132,12 +132,12 @@
           </div>
 
           <div class="quantity" style="margin-top: 20px;">
-            <button id="decrease">-</button>
-            <input type="number" id="count" value="0">
-            <button id="increase">+</button>
+            <button id="decrease4">-</button>
+            <input type="number" id="count4" value="0">
+            <button id="increase4">+</button>
           </div>
 
-          <button id="cart" style="margin-top: 65px;">Add to cart</button>
+          <button id="cart" style="margin-top: 65px;" onclick="addToCart(4)">Add to cart</button>
         </div>
       </div>
     </div>
@@ -145,17 +145,11 @@
 
   <div class="cart-box">
     <p style="display: inline-block; font-size: 72px;">>>>>>>>>>>>></p>
-    <button class="cart">View Cart</button>
+    <button class="cart" onclick="viewCart()">View Cart</button>
     <p style="display: inline-block; font-size: 72px;"><<<<<<<<<<<<</p>
   </div>
 
-  <div class="final-cart">
-    <div class="item">
-      <div class="item-img"></div>
-      <div class="details"></div>
-    </div>
-    <div class="total"></div>
-  </div>
+  <div id="cartItems"></div>
 
   <footer>
     <div class="container">
@@ -178,30 +172,108 @@
     imageDiv.src = imagePath;
   }
 
-  const decreaseBtn = document.getElementById('decrease');
-  const increaseBtn = document.getElementById('increase');
-  const countInput = document.getElementById('count');
+  const decreaseBtn1 = document.getElementById('decrease1');
+  const increaseBtn1 = document.getElementById('increase1');
+  const countInput1 = document.getElementById('count1');
 
-  decreaseBtn.addEventListener('click', () => {
-    let count = parseInt(countInput.value);
+  decreaseBtn1.addEventListener('click', () => {
+    let count = parseInt(countInput1.value);
     if (count > 0) {
       count--;
     }
-    countInput.value = count;
+    countInput1.value = count;
   });
 
-  increaseBtn.addEventListener('click', () => {
-    let count = parseInt(countInput.value);
+  increaseBtn1.addEventListener('click', () => {
+    let count = parseInt(countInput1.value);
     count++;
-    countInput.value = count;
+    countInput1.value = count;
   });
 
-  countInput.addEventListener('change', () => {
-    let count = parseInt(countInput.value);
+  countInput1.addEventListener('change', () => {
+    let count = parseInt(countInput1.value);
     if (isNaN(count)) {
       count = 0;
     }
-    countInput.value = count;
+    countInput1.value = count;
+  });
+
+  const decreaseBtn2 = document.getElementById('decrease2');
+  const increaseBtn2 = document.getElementById('increase2');
+  const countInput2 = document.getElementById('count2');
+
+  decreaseBtn2.addEventListener('click', () => {
+    let count = parseInt(countInput2.value);
+    if (count > 0) {
+      count--;
+    }
+    countInput2.value = count;
+  });
+
+  increaseBtn2.addEventListener('click', () => {
+    let count = parseInt(countInput2.value);
+    count++;
+    countInput2.value = count;
+  });
+
+  countInput2.addEventListener('change', () => {
+    let count = parseInt(countInput2.value);
+    if (isNaN(count)) {
+      count = 0;
+    }
+    countInput2.value = count;
+  });
+
+  const decreaseBtn3 = document.getElementById('decrease3');
+  const increaseBtn3 = document.getElementById('increase3');
+  const countInput3 = document.getElementById('count3');
+
+  decreaseBtn3.addEventListener('click', () => {
+    let count = parseInt(countInput3.value);
+    if (count > 0) {
+      count--;
+    }
+    countInput3.value = count;
+  });
+
+  increaseBtn3.addEventListener('click', () => {
+    let count = parseInt(countInput3.value);
+    count++;
+    countInput3.value = count;
+  });
+
+  countInput3.addEventListener('change', () => {
+    let count = parseInt(countInput3.value);
+    if (isNaN(count)) {
+      count = 0;
+    }
+    countInput3.value = count;
+  });
+
+  const decreaseBtn4 = document.getElementById('decrease4');
+  const increaseBtn4 = document.getElementById('increase4');
+  const countInput4 = document.getElementById('count4');
+
+  decreaseBtn4.addEventListener('click', () => {
+    let count = parseInt(countInput4.value);
+    if (count > 0) {
+      count--;
+    }
+    countInput4.value = count;
+  });
+
+  increaseBtn4.addEventListener('click', () => {
+    let count = parseInt(countInput4.value);
+    count++;
+    countInput4.value = count;
+  });
+
+  countInput4.addEventListener('change', () => {
+    let count = parseInt(countInput4.value);
+    if (isNaN(count)) {
+      count = 0;
+    }
+    countInput4.value = count;
   });
 
   function variety_val(prodId, index) {
@@ -332,27 +404,91 @@ function currentCard(prodId) {
   }
 }
 
-function getCartData() {
-  var cartData = [];
-  var cartCookie = document.cookie.replace(/(?:(?:^|.*;\s*)cart\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+let cart = [];
+    
+    function addToCart(index) {
+      const quantityInput = document.getElementById("count"+index);
+      const quantity = parseInt(quantityInput.value);
 
-  if (cartCookie) {
-    cartData = JSON.parse(cartCookie);
-  }
-      
-  return cartData;
-}
+      if (index == 1){
+        for (let i = 0; i < quantity; i++) {
+        cart.push({ name: "T-shirt", price: 499 });
+        console.log("tshirts");
+       }
+      }
 
-// Function to set the cart data in the cookie
-function setCartData(name, vari, size, qty) {
-  var cartData = [name, vari, size, qty];
-  document.cookie = "cart=" + JSON.stringify(cartData);
-}
+      if (index == 2){
+        for (let i = 0; i < quantity; i++) {
+        cart.push({ name: "Poster", price: 249 });
+        console.log("posters");
+       }
+      }
 
-function clearCart() {
-  setCartData([]);
-}
+      if (index == 3){
+        for (let i = 0; i < quantity; i++) {
+        cart.push({ name: "Mug", price: 399 });
+        console.log("mugs");
+       }
+      }
 
+      if (index == 4){
+        for (let i = 0; i < quantity; i++) {
+        cart.push({ name: "MOVA Globe", price: 7499 });
+        console.log("mova");
+       }
+      }
+
+      quantityInput.value = 1;
+      console.log(quantity + " item(s) added to the cart.");
+    }
+
+    function viewCart() {
+      const cartItemsDiv = document.getElementById("cartItems");
+      cartItemsDiv.innerHTML = ""; // Clear previous cart items
+
+      if (cart.length === 0) {
+        cartItemsDiv.style.display = "none";
+        alert("Cart is empty.");
+      } else {
+        let itemsHtml = "<h2>Cart Items</h2>";
+        let totalPrice = 0;
+
+        for (let i = 0; i < cart.length; i++) {
+          const item = cart[i];
+          const itemId = "item_" + i;
+
+          itemsHtml += `<div id="${itemId}" class="cartItem">`;
+          itemsHtml += `<p>&#9654 ${item.name} (&#8377;${item.price.toFixed(2)})</p>`;
+          itemsHtml += `<button class="deleteBtn" onclick="removeFromCart('${itemId}')">&times;</button>`;
+          itemsHtml += "</div>";
+
+          totalPrice += item.price;
+        }
+
+        itemsHtml += "<p>Total items: " + cart.length + "</p>";
+        itemsHtml += "<p>Total price: &#8377;" + totalPrice.toFixed(2) + "</p>";
+        itemsHtml += `<button class="checkoutBtn" onclick="checkout()">Checkout</button>`;
+
+        cartItemsDiv.innerHTML = itemsHtml;
+        cartItemsDiv.style.display = "block";
+      }
+    }
+
+    function removeFromCart(itemId) {
+      const itemIndex = parseInt(itemId.split("_")[1]);
+      cart.splice(itemIndex, 1);
+      viewCart();
+    }
+
+    function checkout() {
+      if (cart.length === 0) {
+        alert("Cannot checkout. Cart emptied.");
+      } else {
+        alert("Checkout successful!");
+        cart = []; // Clear the cart
+        viewCart(); // Update the cart display
+      }
+    }
 
 </script>
 <script src="https://kit.fontawesome.com/fa21158c25.js" crossorigin="anonymous"></script>

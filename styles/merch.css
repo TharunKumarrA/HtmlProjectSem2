@@ -184,11 +184,11 @@ nav {
   margin-top: 15px;
 }
 
-.quantity #decrease, #increase, #count{
+.quantity #decrease1, #increase1, #count1{
   color: black;
 }
 
-#count{
+#count1{
   text-align: center;
   font-size: 18px;
   width: 70px;
@@ -198,7 +198,7 @@ nav {
   margin-left: 10px;
 }
 
-#increase, #decrease{
+#increase1, #decrease1{
   border-radius: 100%;
   border: none;
   width: 30px;
@@ -206,13 +206,116 @@ nav {
   transition: .15s;
 }
 
-#decrease:hover{
+#decrease1:hover{
   transform: scale(1.1);
   color: white;
   background-color: black;
 }
 
-#increase:hover{
+#increase1:hover{
+  transform: scale(1.1);
+  color: white;
+  background-color: black;
+}
+
+
+.quantity #decrease2, #increase2, #count2{
+  color: black;
+}
+
+#count2{
+  text-align: center;
+  font-size: 18px;
+  width: 70px;
+  border: none;
+  border-radius: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#increase2, #decrease2{
+  border-radius: 100%;
+  border: none;
+  width: 30px;
+  height: 30px;
+  transition: .15s;
+}
+
+#decrease2:hover{
+  transform: scale(1.1);
+  color: white;
+  background-color: black;
+}
+
+#increase2:hover{
+  transform: scale(1.1);
+  color: white;
+  background-color: black;
+}
+
+.quantity #decrease3, #increase3, #count3{
+  color: black;
+}
+
+#count3{
+  text-align: center;
+  font-size: 18px;
+  width: 70px;
+  border: none;
+  border-radius: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#increase3, #decrease3{
+  border-radius: 100%;
+  border: none;
+  width: 30px;
+  height: 30px;
+  transition: .15s;
+}
+
+#decrease3:hover{
+  transform: scale(1.1);
+  color: white;
+  background-color: black;
+}
+
+#increase3:hover{
+  transform: scale(1.1);
+  color: white;
+  background-color: black;
+}
+
+.quantity #decrease4, #increase4, #count4{
+  color: black;
+}
+
+#count4{
+  text-align: center;
+  font-size: 18px;
+  width: 70px;
+  border: none;
+  border-radius: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#increase4, #decrease4{
+  border-radius: 100%;
+  border: none;
+  width: 30px;
+  height: 30px;
+  transition: .15s;
+}
+
+#decrease4:hover{
+  transform: scale(1.1);
+  color: white;
+  background-color: black;
+}
+
+#increase4:hover{
   transform: scale(1.1);
   color: white;
   background-color: black;
@@ -338,4 +441,48 @@ footer p {
 
 ::-webkit-scrollbar{
   width: 0;
+}
+
+#cartItems {
+  display: none;
+  margin-left: 100px;
+  margin-top: 20px;
+  border-radius: 30px;
+  margin-right: 100px;
+  padding: 30px;
+  background-color: #1b1b1b;
+}
+
+#cartItems h2 {
+  text-align: center;
+}
+
+.cartItem {
+  margin-bottom: 10px;
+}
+
+.cartItem p {
+  display: inline-block;
+  margin: 0;
+  width: 300px;
+}
+
+.cartItem .deleteBtn {
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+}
+
+.checkoutBtn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
 }
